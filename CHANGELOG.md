@@ -1,4 +1,12 @@
 <a name="3.2.1"></a>
+# 3.3.0 (2020-05-14)
+
+## Updates
+
+- Start new adopted life with mvl.
+- Changed minute values to increments of 15.
+
+<a name="3.2.1"></a>
 # 3.2.1 (2019-09-18)
 
 ## Updates
