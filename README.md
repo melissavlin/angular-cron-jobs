@@ -1,3 +1,12 @@
+# Forked Version
+
+Fork of [angular-cron-jobs](https://github.com/angular-cron-jobs/angular-cron-jobs), which is no longer maintained.
+
+Differences:
+Changed `minuteValues` to show every 15 minutes instead of every 5 minutes.
+
+
+
 # NO LONGER MAINTAINED
 
 ### This project is no longer maintained! If some wants to take over the project and begin merging in PRs, addressing Issues, and updating functionality please reach out!
@@ -28,7 +37,7 @@ Insert the directive where you would like it to appear in your application:
 
     <cron-selection ng-model="myOutput"></cron-selection>
 
-By setting the ng-model attribute equal to a value in your controller (i.e. `$scope.myOutput` in the example above) you have access to the cron syntax output.  
+By setting the ng-model attribute equal to a value in your controller (i.e. `$scope.myOutput` in the example above) you have access to the cron syntax output.
 
 For example, a job selected to run every month on the 11th at 4:10 AM would output the follow:
 
@@ -41,7 +50,7 @@ as a string.
 The directive takes an optional attribute of `config`
 
     <cron-selection ng-model="myOutput" config="myConfig"></cron-selection>
-    
+
 ### Options
 
 This is an object in your controller you can use to remove options from the user.  For example if you would like the user to be able to set Minute, Hour, and Day but not Week, Month, and Year you would create the following object in your controller:
@@ -115,7 +124,7 @@ The directive takes an attribute of `ng-model` used for init and output data.
 This is a string in your controller of cron syntax that was recieved from your server or any other source:
 
     $scope.myOutput = "30 2 4 * *"
-    
+
 Thew directive will properly build out the UI to reflect this data.
 
 ## Setting Cron after directive load
@@ -129,7 +138,7 @@ This is an expression paired with a value in your controller.  Whenever the valu
     $timeout(function(){
        $scope.myOutput = "0 0 * * *"
     }, 3000);
-    
+
 The directive will properly build out the UI to reflect this data.
 
 ## Utilize Exposed $scope.myFrequency:

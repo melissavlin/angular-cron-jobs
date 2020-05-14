@@ -19,7 +19,7 @@ angular.module("angular-cron-jobs").directive("cronSelection", ["cronService", "
         link: function($scope, $el, $attr, $ngModel) {
 
             var modelChanged = false;
-            
+
             $scope.baseFrequency = baseFrequency;
 
             $scope.frequency = [{
@@ -79,7 +79,8 @@ angular.module("angular-cron-jobs").directive("cronSelection", ["cronService", "
                 }
             }
 
-            $scope.minuteValues = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55];
+            // $scope.minuteValues = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55];
+            $scope.minuteValues = [0, 15, 30, 45];
             $scope.hourValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
             $scope.dayOfMonthValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
             $scope.dayValues = [0, 1, 2, 3, 4, 5, 6];
@@ -96,7 +97,7 @@ angular.module("angular-cron-jobs").directive("cronSelection", ["cronService", "
                     } else if (n && n.base && o && o.base) {
                         modelChanged = false;
                     }
-                    
+
                     var newVal = cronService.setCron(n, $scope.cronStyle);
                     $ngModel.$setViewValue(newVal);
                 }
@@ -197,7 +198,7 @@ angular.module("angular-cron-jobs").directive("cronSelection", ["cronService", "
                 6: "Saturday",
             };
         }
-        
+
 
         if (input !== null && angular.isDefined(days[input])) {
             return days[input];
